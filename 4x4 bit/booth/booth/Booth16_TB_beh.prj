@@ -1,0 +1,2 @@
+vhdl work "booth.vhd"
+vhdl work "booth_tb.vhd"

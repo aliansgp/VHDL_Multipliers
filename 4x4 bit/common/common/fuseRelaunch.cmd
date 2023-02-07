@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Ali/Desktop/CA-Project-1/multipliers/4x4 bit/common/common/common_multiplier4x5_tb_isim_beh.exe" -prj "C:/Users/Ali/Desktop/CA-Project-1/multipliers/4x4 bit/common/common/common_multiplier4x5_tb_beh.prj" "work.common_multiplier4x5_tb" 

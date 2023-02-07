@@ -1,0 +1,22 @@
+V3 11
+FL "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/carry_save_multiplier.vhd" 2023/01/11.14:43:29 P.20131013
+EN work/carry_save_multiplier 1673435675 \
+      FL "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/carry_save_multiplier.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/carry_save_multiplier/Behavioral 1673435676 \
+      FL "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/carry_save_multiplier.vhd" \
+      EN work/carry_save_multiplier 1673435675 CP half_adder CP full_adder
+FL "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/full_adder.vhd" 2021/11/18.23:41:08 P.20131013
+EN work/full_adder 1673435673 \
+      FL "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/full_adder.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/full_adder/Behavioral 1673435674 \
+      FL "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/full_adder.vhd" \
+      EN work/full_adder 1673435673 CP half_adder
+FL "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/half_adder.vhd" 2021/11/18.23:40:43 P.20131013
+EN work/half_adder 1673435671 \
+      FL "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/half_adder.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/half_adder/Behavioral 1673435672 \
+      FL "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/half_adder.vhd" \
+      EN work/half_adder 1673435671

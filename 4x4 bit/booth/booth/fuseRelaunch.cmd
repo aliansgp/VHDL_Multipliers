@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Ali/Desktop/CA-Project-1/multipliers/16 bit/booth/booth/Booth16_TB_isim_beh.exe" -prj "C:/Users/Ali/Desktop/CA-Project-1/multipliers/16 bit/booth/booth/Booth16_TB_beh.prj" "work.Booth16_TB" 

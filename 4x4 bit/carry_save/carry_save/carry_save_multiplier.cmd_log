@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Ali/Desktop/CA-Project-1/multipliers/4x4 bit/carry_save/carry_save/carry_save_multiplier.xst" -ofn "C:/Users/Ali/Desktop/CA-Project-1/multipliers/4x4 bit/carry_save/carry_save/carry_save_multiplier.syr" 

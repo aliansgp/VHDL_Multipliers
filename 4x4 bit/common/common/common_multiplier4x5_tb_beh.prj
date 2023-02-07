@@ -1,0 +1,4 @@
+vhdl work "../../../../../CA/az7_report (4)/az7_report/codes/half_adder.vhd"
+vhdl work "../../../../../CA/az7_report (4)/az7_report/codes/full_adder.vhd"
+vhdl work "../../../../../CA/az7_report (4)/az7_report/codes/common_multiplier4x5.vhd"
+vhdl work "../../../../../CA/az7_report (4)/az7_report/codes/common_multiplier4x5_tb.vhd"

@@ -1,0 +1,4 @@
+vhdl work "../../../../../CA/az7_report (4)/az7_report/codes/half_adder.vhd"
+vhdl work "../../../../../CA/az7_report (4)/az7_report/codes/full_adder.vhd"
+vhdl work "../../../../../CA/az7_report (4)/az7_report/codes/carry_save_multiplier.vhd"
+vhdl work "../../../../../CA/az7_report (4)/az7_report/codes/carry_save_multiplier_tb.vhd"

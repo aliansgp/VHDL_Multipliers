@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Ali/Desktop/CA-Project-1/multipliers/16 bit/booth/booth/Booth16.xst" -ofn "C:/Users/Ali/Desktop/CA-Project-1/multipliers/16 bit/booth/booth/Booth16.syr" 

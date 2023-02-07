@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Ali/Desktop/CA-Project-1/multipliers/4x4 bit/carry_save/carry_save/carry_save_multiplier_tb_isim_beh.exe" -prj "C:/Users/Ali/Desktop/CA-Project-1/multipliers/4x4 bit/carry_save/carry_save/carry_save_multiplier_tb_beh.prj" "work.carry_save_multiplier_tb" 

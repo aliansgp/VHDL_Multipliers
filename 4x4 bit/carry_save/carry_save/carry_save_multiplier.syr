@@ -1,0 +1,333 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: carry_save_multiplier.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "carry_save_multiplier.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "carry_save_multiplier"
+Output Format                      : NGC
+Target Device                      : xc3sd1800a-4-fg676
+
+---- Source Options
+Top Module Name                    : carry_save_multiplier
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/half_adder.vhd" in Library work.
+Architecture behavioral of Entity half_adder is up to date.
+Compiling vhdl file "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/full_adder.vhd" in Library work.
+Architecture behavioral of Entity full_adder is up to date.
+Compiling vhdl file "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/carry_save_multiplier.vhd" in Library work.
+Architecture behavioral of Entity carry_save_multiplier is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <carry_save_multiplier> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <half_adder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <full_adder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <half_adder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <half_adder> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <carry_save_multiplier> in library <work> (Architecture <behavioral>).
+Entity <carry_save_multiplier> analyzed. Unit <carry_save_multiplier> generated.
+
+Analyzing Entity <half_adder> in library <work> (Architecture <behavioral>).
+Entity <half_adder> analyzed. Unit <half_adder> generated.
+
+Analyzing Entity <full_adder> in library <work> (Architecture <behavioral>).
+Entity <full_adder> analyzed. Unit <full_adder> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <half_adder>.
+    Related source file is "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/half_adder.vhd".
+    Found 1-bit xor2 for signal <sum>.
+Unit <half_adder> synthesized.
+
+
+Synthesizing Unit <full_adder>.
+    Related source file is "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/full_adder.vhd".
+Unit <full_adder> synthesized.
+
+
+Synthesizing Unit <carry_save_multiplier>.
+    Related source file is "C:/Users/Ali/Desktop/CA/az7_report (4)/az7_report/codes/carry_save_multiplier.vhd".
+WARNING:Xst:1306 - Output <p<7:4>> is never assigned.
+WARNING:Xst:1780 - Signal <s<7:6>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <s<5:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <m<15>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <c<11:9>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <c<8:6>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <carry_save_multiplier> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 15
+ 1-bit xor2                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <full_adder_ins2> is unconnected in block <carry_save_multiplier>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adder_ins4> is unconnected in block <carry_save_multiplier>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adder_ins5> is unconnected in block <carry_save_multiplier>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 15
+ 1-bit xor2                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <carry_save_multiplier> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block carry_save_multiplier, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : carry_save_multiplier.ngr
+Top Level Output File Name         : carry_save_multiplier
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 11
+#      LUT2                        : 2
+#      LUT3                        : 1
+#      LUT4                        : 8
+# IO Buffers                       : 12
+#      IBUF                        : 8
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3sd1800afg676-4 
+
+ Number of Slices:                        6  out of  16640     0%  
+ Number of 4 input LUTs:                 11  out of  33280     0%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  12  out of    519     2%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 10.778ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 38 / 4
+-------------------------------------------------------------------------
+Delay:               10.778ns (Levels of Logic = 6)
+  Source:            b<1> (PAD)
+  Destination:       p<3> (PAD)
+
+  Data Path: b<1> to p<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.849   0.713  b_1_IBUF (b_1_IBUF)
+     LUT4:I1->O            1   0.643   0.563  half_adder_ins2/Mxor_sum_Result1 (s<1>)
+     LUT3:I0->O            1   0.648   0.563  full_adder_ins1/half_adder_ins0/Mxor_sum_Result1 (full_adder_ins1/s0)
+     LUT4:I0->O            1   0.648   0.563  full_adder_ins3/half_adder_ins0/Mxor_sum_Result (full_adder_ins3/s0)
+     LUT4:I0->O            1   0.648   0.420  full_adder_ins3/half_adder_ins1/Mxor_sum_Result1 (p_3_OBUF)
+     OBUF:I->O                 4.520          p_3_OBUF (p<3>)
+    ----------------------------------------
+    Total                     10.778ns (7.956ns logic, 2.822ns route)
+                                       (73.8% logic, 26.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.91 secs
+ 
+--> 
+
+Total memory usage is 4513708 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,2897 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: Booth16.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Booth16.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Booth16"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : Booth16
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Ali\Desktop\CA-Project-1\multipliers\16 bit\booth\booth\booth.vhd" into library work
+Parsing entity <Booth16>.
+Parsing architecture <rtl> of entity <booth16>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Booth16> (architecture <rtl>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Ali\Desktop\CA-Project-1\multipliers\16 bit\booth\booth\booth.vhd" Line 27: rst should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Ali\Desktop\CA-Project-1\multipliers\16 bit\booth\booth\booth.vhd" Line 32: m should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Ali\Desktop\CA-Project-1\multipliers\16 bit\booth\booth\booth.vhd" Line 33: q should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Booth16>.
+    Related source file is "C:\Users\Ali\Desktop\CA-Project-1\multipliers\16 bit\booth\booth\booth.vhd".
+    Found 32-bit register for signal <incre>.
+    Found 1-bit register for signal <s<32>>.
+    Found 1-bit register for signal <s<31>>.
+    Found 1-bit register for signal <s<30>>.
+    Found 1-bit register for signal <s<29>>.
+    Found 1-bit register for signal <s<28>>.
+    Found 1-bit register for signal <s<27>>.
+    Found 1-bit register for signal <s<26>>.
+    Found 1-bit register for signal <s<25>>.
+    Found 1-bit register for signal <s<24>>.
+    Found 1-bit register for signal <s<23>>.
+    Found 1-bit register for signal <s<22>>.
+    Found 1-bit register for signal <s<21>>.
+    Found 1-bit register for signal <s<20>>.
+    Found 1-bit register for signal <s<19>>.
+    Found 1-bit register for signal <s<18>>.
+    Found 1-bit register for signal <s<17>>.
+    Found 1-bit register for signal <s<16>>.
+    Found 1-bit register for signal <s<15>>.
+    Found 1-bit register for signal <s<14>>.
+    Found 1-bit register for signal <s<13>>.
+    Found 1-bit register for signal <s<12>>.
+    Found 1-bit register for signal <s<11>>.
+    Found 1-bit register for signal <s<10>>.
+    Found 1-bit register for signal <s<9>>.
+    Found 1-bit register for signal <s<8>>.
+    Found 1-bit register for signal <s<7>>.
+    Found 1-bit register for signal <s<6>>.
+    Found 1-bit register for signal <s<5>>.
+    Found 1-bit register for signal <s<4>>.
+    Found 1-bit register for signal <s<3>>.
+    Found 1-bit register for signal <s<2>>.
+    Found 1-bit register for signal <s<1>>.
+    Found 1-bit register for signal <s<0>>.
+    Found 32-bit adder for signal <incre[31]_GND_3_o_add_0_OUT> created at line 35.
+    Found 16-bit adder for signal <s[32]_a[15]_add_2_OUT> created at line 41.
+    Found 16-bit subtractor for signal <GND_3_o_GND_3_o_sub_2_OUT<15:0>> created at line 38.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <a<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <valid1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  65 D-type flip-flop(s).
+	inferred  17 Latch(s).
+	inferred  65 Multiplexer(s).
+Unit <Booth16> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 34
+ 1-bit register                                        : 33
+ 32-bit register                                       : 1
+# Latches                                              : 17
+ 1-bit latch                                           : 17
+# Multiplexers                                         : 65
+ 1-bit 2-to-1 multiplexer                              : 64
+ 33-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Booth16>.
+The following registers are absorbed into counter <incre>: 1 register on signal <incre>.
+Unit <Booth16> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+# Multiplexers                                         : 65
+ 1-bit 2-to-1 multiplexer                              : 64
+ 33-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    s_32 in unit <Booth16>
+    valid1 in unit <Booth16>
+    s_1 in unit <Booth16>
+    s_2 in unit <Booth16>
+    s_4 in unit <Booth16>
+    s_5 in unit <Booth16>
+    s_3 in unit <Booth16>
+    s_6 in unit <Booth16>
+    s_7 in unit <Booth16>
+    s_8 in unit <Booth16>
+    s_9 in unit <Booth16>
+    s_10 in unit <Booth16>
+    s_11 in unit <Booth16>
+    s_12 in unit <Booth16>
+    s_13 in unit <Booth16>
+    s_14 in unit <Booth16>
+    s_15 in unit <Booth16>
+    s_16 in unit <Booth16>
+    s_17 in unit <Booth16>
+    s_19 in unit <Booth16>
+    s_20 in unit <Booth16>
+    s_18 in unit <Booth16>
+    s_21 in unit <Booth16>
+    s_22 in unit <Booth16>
+    s_23 in unit <Booth16>
+    s_24 in unit <Booth16>
+    s_25 in unit <Booth16>
+    s_26 in unit <Booth16>
+    s_27 in unit <Booth16>
+    s_28 in unit <Booth16>
+    s_29 in unit <Booth16>
+    s_30 in unit <Booth16>
+    s_31 in unit <Booth16>
+
+
+Optimizing unit <Booth16> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Booth16, actual ratio is 0.
+Latch valid1 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 97
+ Flip-Flops                                            : 97
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Booth16.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 348
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 31
+#      LUT2                        : 3
+#      LUT3                        : 32
+#      LUT4                        : 48
+#      LUT5                        : 50
+#      LUT6                        : 56
+#      MUXCY                       : 61
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 147
+#      FDC                         : 33
+#      FDCE                        : 32
+#      FDP                         : 32
+#      LD                          : 18
+#      LDC                         : 32
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 66
+#      IBUF                        : 33
+#      OBUF                        : 33
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             130  out of  126800     0%  
+ Number of Slice LUTs:                  221  out of  63400     0%  
+    Number used as Logic:               221  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    284
+   Number with an unused Flip Flop:     154  out of    284    54%  
+   Number with an unused LUT:            63  out of    284    22%  
+   Number of fully used LUT-FF pairs:    67  out of    284    23%  
+   Number of unique control sets:       100
+
+IO Utilization: 
+ Number of IOs:                          67
+ Number of bonded IOBs:                  67  out of    210    31%  
+    IOB Flip Flops/Latches:              17
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------+------------------------+-------+
+Clock Signal                             | Clock buffer(FF name)  | Load  |
+-----------------------------------------+------------------------+-------+
+CLK                                      | BUFGP                  | 97    |
+RST                                      | IBUF+BUFG              | 16    |
+RST_P[31]_AND_6_o(RST_P[31]_AND_6_o1:O)  | NONE(*)(s_31_LDC)      | 1     |
+RST_P[31]_AND_8_o(RST_P[31]_AND_8_o1:O)  | NONE(*)(s_30_LDC)      | 1     |
+RST_P[31]_AND_10_o(RST_P[31]_AND_10_o1:O)| NONE(*)(s_29_LDC)      | 1     |
+RST_P[31]_AND_12_o(RST_P[31]_AND_12_o1:O)| NONE(*)(s_28_LDC)      | 1     |
+RST_P[31]_AND_14_o(RST_P[31]_AND_14_o1:O)| NONE(*)(s_27_LDC)      | 1     |
+RST_P[31]_AND_16_o(RST_P[31]_AND_16_o1:O)| NONE(*)(s_26_LDC)      | 1     |
+RST_P[31]_AND_18_o(RST_P[31]_AND_18_o1:O)| NONE(*)(s_25_LDC)      | 1     |
+RST_P[31]_AND_20_o(RST_P[31]_AND_20_o1:O)| NONE(*)(s_24_LDC)      | 1     |
+RST_P[31]_AND_22_o(RST_P[31]_AND_22_o1:O)| NONE(*)(s_23_LDC)      | 1     |
+RST_P[31]_AND_24_o(RST_P[31]_AND_24_o1:O)| NONE(*)(s_22_LDC)      | 1     |
+RST_P[31]_AND_26_o(RST_P[31]_AND_26_o1:O)| NONE(*)(s_21_LDC)      | 1     |
+RST_P[31]_AND_32_o(RST_P[31]_AND_32_o1:O)| NONE(*)(s_18_LDC)      | 1     |
+RST_P[31]_AND_28_o(RST_P[31]_AND_28_o1:O)| NONE(*)(s_20_LDC)      | 1     |
+RST_P[31]_AND_30_o(RST_P[31]_AND_30_o1:O)| NONE(*)(s_19_LDC)      | 1     |
+RST_P[31]_AND_34_o(RST_P[31]_AND_34_o1:O)| NONE(*)(s_17_LDC)      | 1     |
+RST_P[31]_AND_36_o(RST_P[31]_AND_36_o1:O)| NONE(*)(s_16_LDC)      | 1     |
+RST_P[31]_AND_38_o(RST_P[31]_AND_38_o1:O)| NONE(*)(s_15_LDC)      | 1     |
+RST_P[31]_AND_40_o(RST_P[31]_AND_40_o1:O)| NONE(*)(s_14_LDC)      | 1     |
+RST_P[31]_AND_42_o(RST_P[31]_AND_42_o1:O)| NONE(*)(s_13_LDC)      | 1     |
+RST_P[31]_AND_44_o(RST_P[31]_AND_44_o1:O)| NONE(*)(s_12_LDC)      | 1     |
+RST_P[31]_AND_46_o(RST_P[31]_AND_46_o1:O)| NONE(*)(s_11_LDC)      | 1     |
+RST_P[31]_AND_48_o(RST_P[31]_AND_48_o1:O)| NONE(*)(s_10_LDC)      | 1     |
+RST_P[31]_AND_50_o(RST_P[31]_AND_50_o1:O)| NONE(*)(s_9_LDC)       | 1     |
+RST_P[31]_AND_52_o(RST_P[31]_AND_52_o1:O)| NONE(*)(s_8_LDC)       | 1     |
+RST_P[31]_AND_54_o(RST_P[31]_AND_54_o1:O)| NONE(*)(s_7_LDC)       | 1     |
+RST_P[31]_AND_56_o(RST_P[31]_AND_56_o1:O)| NONE(*)(s_6_LDC)       | 1     |
+RST_P[31]_AND_62_o(RST_P[31]_AND_62_o1:O)| NONE(*)(s_3_LDC)       | 1     |
+RST_P[31]_AND_58_o(RST_P[31]_AND_58_o1:O)| NONE(*)(s_5_LDC)       | 1     |
+RST_P[31]_AND_60_o(RST_P[31]_AND_60_o1:O)| NONE(*)(s_4_LDC)       | 1     |
+RST_P[31]_AND_64_o(RST_P[31]_AND_64_o1:O)| NONE(*)(s_2_LDC)       | 1     |
+RST_P[31]_AND_66_o(RST_P[31]_AND_66_o1:O)| NONE(*)(s_1_LDC)       | 1     |
+valid1_G(valid1_G:O)                     | NONE(*)(valid1)        | 2     |
+RST_P[31]_AND_4_o(RST_P[31]_AND_4_o1:O)  | NONE(*)(s_32_LDC)      | 1     |
+-----------------------------------------+------------------------+-------+
+(*) These 33 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.088ns (Maximum Frequency: 323.872MHz)
+   Minimum input arrival time before clock: 1.533ns
+   Maximum output required time after clock: 1.490ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 3.088ns (frequency: 323.872MHz)
+  Total number of paths / destination ports: 6513 / 193
+-------------------------------------------------------------------------
+Delay:               3.088ns (Levels of Logic = 3)
+  Source:            incre_0 (FF)
+  Destination:       s_31_C_31 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: incre_0 to s_31_C_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.361   0.697  incre_0 (incre_0)
+     LUT6:I0->O            1   0.097   0.693  GND_3_o_incre[31]_equal_11_o<31>1 (GND_3_o_incre[31]_equal_11_o<31>)
+     LUT6:I0->O           99   0.097   0.412  GND_3_o_incre[31]_equal_11_o<31>7 (GND_3_o_incre[31]_equal_11_o)
+     LUT4:I3->O            2   0.097   0.283  RST_P[31]_AND_4_o1 (RST_P[31]_AND_4_o)
+     FDP:PRE                   0.349          s_32_P_32
+    ----------------------------------------
+    Total                      3.088ns (1.001ns logic, 2.087ns route)
+                                       (32.4% logic, 67.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_6_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_31_LDC (LATCH)
+  Destination:       s_31_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_6_o falling
+  Destination Clock: RST_P[31]_AND_6_o falling
+
+  Data Path: s_31_LDC to s_31_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_31_LDC (s_31_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_7_o1 (RST_P[31]_AND_7_o)
+     LDC:CLR                   0.349          s_31_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_8_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_30_LDC (LATCH)
+  Destination:       s_30_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_8_o falling
+  Destination Clock: RST_P[31]_AND_8_o falling
+
+  Data Path: s_30_LDC to s_30_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_30_LDC (s_30_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_9_o1 (RST_P[31]_AND_9_o)
+     LDC:CLR                   0.349          s_30_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_10_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_29_LDC (LATCH)
+  Destination:       s_29_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_10_o falling
+  Destination Clock: RST_P[31]_AND_10_o falling
+
+  Data Path: s_29_LDC to s_29_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_29_LDC (s_29_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_11_o1 (RST_P[31]_AND_11_o)
+     LDC:CLR                   0.349          s_29_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_12_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_28_LDC (LATCH)
+  Destination:       s_28_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_12_o falling
+  Destination Clock: RST_P[31]_AND_12_o falling
+
+  Data Path: s_28_LDC to s_28_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_28_LDC (s_28_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_13_o1 (RST_P[31]_AND_13_o)
+     LDC:CLR                   0.349          s_28_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_14_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_27_LDC (LATCH)
+  Destination:       s_27_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_14_o falling
+  Destination Clock: RST_P[31]_AND_14_o falling
+
+  Data Path: s_27_LDC to s_27_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_27_LDC (s_27_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_15_o1 (RST_P[31]_AND_15_o)
+     LDC:CLR                   0.349          s_27_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_16_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_26_LDC (LATCH)
+  Destination:       s_26_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_16_o falling
+  Destination Clock: RST_P[31]_AND_16_o falling
+
+  Data Path: s_26_LDC to s_26_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_26_LDC (s_26_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_17_o1 (RST_P[31]_AND_17_o)
+     LDC:CLR                   0.349          s_26_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_18_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_25_LDC (LATCH)
+  Destination:       s_25_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_18_o falling
+  Destination Clock: RST_P[31]_AND_18_o falling
+
+  Data Path: s_25_LDC to s_25_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_25_LDC (s_25_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_19_o1 (RST_P[31]_AND_19_o)
+     LDC:CLR                   0.349          s_25_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_20_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_24_LDC (LATCH)
+  Destination:       s_24_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_20_o falling
+  Destination Clock: RST_P[31]_AND_20_o falling
+
+  Data Path: s_24_LDC to s_24_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_24_LDC (s_24_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_21_o1 (RST_P[31]_AND_21_o)
+     LDC:CLR                   0.349          s_24_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_22_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_23_LDC (LATCH)
+  Destination:       s_23_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_22_o falling
+  Destination Clock: RST_P[31]_AND_22_o falling
+
+  Data Path: s_23_LDC to s_23_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_23_LDC (s_23_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_23_o1 (RST_P[31]_AND_23_o)
+     LDC:CLR                   0.349          s_23_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_24_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_22_LDC (LATCH)
+  Destination:       s_22_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_24_o falling
+  Destination Clock: RST_P[31]_AND_24_o falling
+
+  Data Path: s_22_LDC to s_22_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_22_LDC (s_22_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_25_o1 (RST_P[31]_AND_25_o)
+     LDC:CLR                   0.349          s_22_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_26_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_21_LDC (LATCH)
+  Destination:       s_21_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_26_o falling
+  Destination Clock: RST_P[31]_AND_26_o falling
+
+  Data Path: s_21_LDC to s_21_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_21_LDC (s_21_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_27_o1 (RST_P[31]_AND_27_o)
+     LDC:CLR                   0.349          s_21_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_32_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_18_LDC (LATCH)
+  Destination:       s_18_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_32_o falling
+  Destination Clock: RST_P[31]_AND_32_o falling
+
+  Data Path: s_18_LDC to s_18_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_18_LDC (s_18_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_33_o1 (RST_P[31]_AND_33_o)
+     LDC:CLR                   0.349          s_18_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_28_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_20_LDC (LATCH)
+  Destination:       s_20_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_28_o falling
+  Destination Clock: RST_P[31]_AND_28_o falling
+
+  Data Path: s_20_LDC to s_20_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_20_LDC (s_20_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_29_o1 (RST_P[31]_AND_29_o)
+     LDC:CLR                   0.349          s_20_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_30_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_19_LDC (LATCH)
+  Destination:       s_19_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_30_o falling
+  Destination Clock: RST_P[31]_AND_30_o falling
+
+  Data Path: s_19_LDC to s_19_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_19_LDC (s_19_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_31_o1 (RST_P[31]_AND_31_o)
+     LDC:CLR                   0.349          s_19_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_34_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_17_LDC (LATCH)
+  Destination:       s_17_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_34_o falling
+  Destination Clock: RST_P[31]_AND_34_o falling
+
+  Data Path: s_17_LDC to s_17_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_17_LDC (s_17_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_35_o1 (RST_P[31]_AND_35_o)
+     LDC:CLR                   0.349          s_17_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_36_o'
+  Clock period: 1.591ns (frequency: 628.694MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.591ns (Levels of Logic = 1)
+  Source:            s_16_LDC (LATCH)
+  Destination:       s_16_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_36_o falling
+  Destination Clock: RST_P[31]_AND_36_o falling
+
+  Data Path: s_16_LDC to s_16_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.472   0.389  s_16_LDC (s_16_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_37_o1 (RST_P[31]_AND_37_o)
+     LDC:CLR                   0.349          s_16_LDC
+    ----------------------------------------
+    Total                      1.591ns (0.918ns logic, 0.673ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_38_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_15_LDC (LATCH)
+  Destination:       s_15_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_38_o falling
+  Destination Clock: RST_P[31]_AND_38_o falling
+
+  Data Path: s_15_LDC to s_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_15_LDC (s_15_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_39_o1 (RST_P[31]_AND_39_o)
+     LDC:CLR                   0.349          s_15_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_40_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_14_LDC (LATCH)
+  Destination:       s_14_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_40_o falling
+  Destination Clock: RST_P[31]_AND_40_o falling
+
+  Data Path: s_14_LDC to s_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_14_LDC (s_14_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_41_o1 (RST_P[31]_AND_41_o)
+     LDC:CLR                   0.349          s_14_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_42_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_13_LDC (LATCH)
+  Destination:       s_13_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_42_o falling
+  Destination Clock: RST_P[31]_AND_42_o falling
+
+  Data Path: s_13_LDC to s_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_13_LDC (s_13_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_43_o1 (RST_P[31]_AND_43_o)
+     LDC:CLR                   0.349          s_13_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_44_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_12_LDC (LATCH)
+  Destination:       s_12_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_44_o falling
+  Destination Clock: RST_P[31]_AND_44_o falling
+
+  Data Path: s_12_LDC to s_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_12_LDC (s_12_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_45_o1 (RST_P[31]_AND_45_o)
+     LDC:CLR                   0.349          s_12_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_46_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_11_LDC (LATCH)
+  Destination:       s_11_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_46_o falling
+  Destination Clock: RST_P[31]_AND_46_o falling
+
+  Data Path: s_11_LDC to s_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_11_LDC (s_11_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_47_o1 (RST_P[31]_AND_47_o)
+     LDC:CLR                   0.349          s_11_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_48_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_10_LDC (LATCH)
+  Destination:       s_10_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_48_o falling
+  Destination Clock: RST_P[31]_AND_48_o falling
+
+  Data Path: s_10_LDC to s_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_10_LDC (s_10_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_49_o1 (RST_P[31]_AND_49_o)
+     LDC:CLR                   0.349          s_10_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_50_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_9_LDC (LATCH)
+  Destination:       s_9_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_50_o falling
+  Destination Clock: RST_P[31]_AND_50_o falling
+
+  Data Path: s_9_LDC to s_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_9_LDC (s_9_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_51_o1 (RST_P[31]_AND_51_o)
+     LDC:CLR                   0.349          s_9_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_52_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_8_LDC (LATCH)
+  Destination:       s_8_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_52_o falling
+  Destination Clock: RST_P[31]_AND_52_o falling
+
+  Data Path: s_8_LDC to s_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_8_LDC (s_8_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_53_o1 (RST_P[31]_AND_53_o)
+     LDC:CLR                   0.349          s_8_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_54_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_7_LDC (LATCH)
+  Destination:       s_7_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_54_o falling
+  Destination Clock: RST_P[31]_AND_54_o falling
+
+  Data Path: s_7_LDC to s_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_7_LDC (s_7_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_55_o1 (RST_P[31]_AND_55_o)
+     LDC:CLR                   0.349          s_7_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_56_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_6_LDC (LATCH)
+  Destination:       s_6_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_56_o falling
+  Destination Clock: RST_P[31]_AND_56_o falling
+
+  Data Path: s_6_LDC to s_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_6_LDC (s_6_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_57_o1 (RST_P[31]_AND_57_o)
+     LDC:CLR                   0.349          s_6_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_62_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_3_LDC (LATCH)
+  Destination:       s_3_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_62_o falling
+  Destination Clock: RST_P[31]_AND_62_o falling
+
+  Data Path: s_3_LDC to s_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_3_LDC (s_3_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_63_o1 (RST_P[31]_AND_63_o)
+     LDC:CLR                   0.349          s_3_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_58_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_5_LDC (LATCH)
+  Destination:       s_5_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_58_o falling
+  Destination Clock: RST_P[31]_AND_58_o falling
+
+  Data Path: s_5_LDC to s_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_5_LDC (s_5_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_59_o1 (RST_P[31]_AND_59_o)
+     LDC:CLR                   0.349          s_5_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_60_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_4_LDC (LATCH)
+  Destination:       s_4_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_60_o falling
+  Destination Clock: RST_P[31]_AND_60_o falling
+
+  Data Path: s_4_LDC to s_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_4_LDC (s_4_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_61_o1 (RST_P[31]_AND_61_o)
+     LDC:CLR                   0.349          s_4_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_64_o'
+  Clock period: 1.595ns (frequency: 627.038MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.595ns (Levels of Logic = 1)
+  Source:            s_2_LDC (LATCH)
+  Destination:       s_2_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_64_o falling
+  Destination Clock: RST_P[31]_AND_64_o falling
+
+  Data Path: s_2_LDC to s_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.393  s_2_LDC (s_2_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_65_o1 (RST_P[31]_AND_65_o)
+     LDC:CLR                   0.349          s_2_LDC
+    ----------------------------------------
+    Total                      1.595ns (0.918ns logic, 0.677ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_66_o'
+  Clock period: 1.604ns (frequency: 623.480MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.604ns (Levels of Logic = 1)
+  Source:            s_1_LDC (LATCH)
+  Destination:       s_1_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_66_o falling
+  Destination Clock: RST_P[31]_AND_66_o falling
+
+  Data Path: s_1_LDC to s_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              6   0.472   0.402  s_1_LDC (s_1_LDC)
+     LUT6:I4->O            2   0.097   0.283  RST_P[31]_AND_67_o1 (RST_P[31]_AND_67_o)
+     LDC:CLR                   0.349          s_1_LDC
+    ----------------------------------------
+    Total                      1.604ns (0.918ns logic, 0.686ns route)
+                                       (57.2% logic, 42.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST_P[31]_AND_4_o'
+  Clock period: 1.600ns (frequency: 625.117MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.600ns (Levels of Logic = 1)
+  Source:            s_32_LDC (LATCH)
+  Destination:       s_32_LDC (LATCH)
+  Source Clock:      RST_P[31]_AND_4_o falling
+  Destination Clock: RST_P[31]_AND_4_o falling
+
+  Data Path: s_32_LDC to s_32_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.398  s_32_LDC (s_32_LDC)
+     LUT5:I3->O            2   0.097   0.283  RST_P[31]_AND_5_o1 (RST_P[31]_AND_5_o)
+     LDC:CLR                   0.349          s_32_LDC
+    ----------------------------------------
+    Total                      1.600ns (0.918ns logic, 0.682ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 113 / 81
+-------------------------------------------------------------------------
+Offset:              1.533ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_16_P_16 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to s_16_P_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.803  RST_IBUF (RST_IBUF)
+     LUT6:I0->O            2   0.097   0.283  RST_P[31]_AND_66_o1 (RST_P[31]_AND_66_o)
+     FDP:PRE                   0.349          s_1_P_1
+    ----------------------------------------
+    Total                      1.533ns (0.447ns logic, 1.086ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              0.280ns (Levels of Logic = 1)
+  Source:            M<15> (PAD)
+  Destination:       a_15 (LATCH)
+  Destination Clock: RST falling
+
+  Data Path: M<15> to a_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.279  M_15_IBUF (M_15_IBUF)
+     LD:D                     -0.028          a_15
+    ----------------------------------------
+    Total                      0.280ns (0.001ns logic, 0.279ns route)
+                                       (0.4% logic, 99.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_6_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_31_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_6_o falling
+
+  Data Path: RST to s_31_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_7_o1 (RST_P[31]_AND_7_o)
+     LDC:CLR                   0.349          s_31_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_8_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_30_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_8_o falling
+
+  Data Path: RST to s_30_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_9_o1 (RST_P[31]_AND_9_o)
+     LDC:CLR                   0.349          s_30_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_10_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_29_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_10_o falling
+
+  Data Path: RST to s_29_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_11_o1 (RST_P[31]_AND_11_o)
+     LDC:CLR                   0.349          s_29_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_12_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_28_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_12_o falling
+
+  Data Path: RST to s_28_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_13_o1 (RST_P[31]_AND_13_o)
+     LDC:CLR                   0.349          s_28_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_14_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_27_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_14_o falling
+
+  Data Path: RST to s_27_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_15_o1 (RST_P[31]_AND_15_o)
+     LDC:CLR                   0.349          s_27_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_16_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_26_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_16_o falling
+
+  Data Path: RST to s_26_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_17_o1 (RST_P[31]_AND_17_o)
+     LDC:CLR                   0.349          s_26_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_18_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_25_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_18_o falling
+
+  Data Path: RST to s_25_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_19_o1 (RST_P[31]_AND_19_o)
+     LDC:CLR                   0.349          s_25_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_20_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_24_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_20_o falling
+
+  Data Path: RST to s_24_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_21_o1 (RST_P[31]_AND_21_o)
+     LDC:CLR                   0.349          s_24_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_22_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_23_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_22_o falling
+
+  Data Path: RST to s_23_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_23_o1 (RST_P[31]_AND_23_o)
+     LDC:CLR                   0.349          s_23_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_24_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_22_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_24_o falling
+
+  Data Path: RST to s_22_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_25_o1 (RST_P[31]_AND_25_o)
+     LDC:CLR                   0.349          s_22_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_26_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_21_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_26_o falling
+
+  Data Path: RST to s_21_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_27_o1 (RST_P[31]_AND_27_o)
+     LDC:CLR                   0.349          s_21_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_32_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_18_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_32_o falling
+
+  Data Path: RST to s_18_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_33_o1 (RST_P[31]_AND_33_o)
+     LDC:CLR                   0.349          s_18_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_28_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_20_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_28_o falling
+
+  Data Path: RST to s_20_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_29_o1 (RST_P[31]_AND_29_o)
+     LDC:CLR                   0.349          s_20_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_30_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_19_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_30_o falling
+
+  Data Path: RST to s_19_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_31_o1 (RST_P[31]_AND_31_o)
+     LDC:CLR                   0.349          s_19_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_34_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_17_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_34_o falling
+
+  Data Path: RST to s_17_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_35_o1 (RST_P[31]_AND_35_o)
+     LDC:CLR                   0.349          s_17_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_36_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_16_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_36_o falling
+
+  Data Path: RST to s_16_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_37_o1 (RST_P[31]_AND_37_o)
+     LDC:CLR                   0.349          s_16_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_38_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_15_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_38_o falling
+
+  Data Path: RST to s_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_39_o1 (RST_P[31]_AND_39_o)
+     LDC:CLR                   0.349          s_15_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_40_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_14_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_40_o falling
+
+  Data Path: RST to s_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_41_o1 (RST_P[31]_AND_41_o)
+     LDC:CLR                   0.349          s_14_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_42_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_13_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_42_o falling
+
+  Data Path: RST to s_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_43_o1 (RST_P[31]_AND_43_o)
+     LDC:CLR                   0.349          s_13_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_44_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_12_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_44_o falling
+
+  Data Path: RST to s_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_45_o1 (RST_P[31]_AND_45_o)
+     LDC:CLR                   0.349          s_12_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_46_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_11_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_46_o falling
+
+  Data Path: RST to s_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_47_o1 (RST_P[31]_AND_47_o)
+     LDC:CLR                   0.349          s_11_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_48_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_10_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_48_o falling
+
+  Data Path: RST to s_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_49_o1 (RST_P[31]_AND_49_o)
+     LDC:CLR                   0.349          s_10_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_50_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_9_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_50_o falling
+
+  Data Path: RST to s_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_51_o1 (RST_P[31]_AND_51_o)
+     LDC:CLR                   0.349          s_9_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_52_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_8_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_52_o falling
+
+  Data Path: RST to s_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_53_o1 (RST_P[31]_AND_53_o)
+     LDC:CLR                   0.349          s_8_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_54_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_7_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_54_o falling
+
+  Data Path: RST to s_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_55_o1 (RST_P[31]_AND_55_o)
+     LDC:CLR                   0.349          s_7_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_56_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_6_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_56_o falling
+
+  Data Path: RST to s_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_57_o1 (RST_P[31]_AND_57_o)
+     LDC:CLR                   0.349          s_6_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_62_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_3_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_62_o falling
+
+  Data Path: RST to s_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_63_o1 (RST_P[31]_AND_63_o)
+     LDC:CLR                   0.349          s_3_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_58_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_5_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_58_o falling
+
+  Data Path: RST to s_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_59_o1 (RST_P[31]_AND_59_o)
+     LDC:CLR                   0.349          s_5_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_60_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_4_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_60_o falling
+
+  Data Path: RST to s_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_61_o1 (RST_P[31]_AND_61_o)
+     LDC:CLR                   0.349          s_4_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_64_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_2_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_64_o falling
+
+  Data Path: RST to s_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_65_o1 (RST_P[31]_AND_65_o)
+     LDC:CLR                   0.349          s_2_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_66_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_1_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_66_o falling
+
+  Data Path: RST to s_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            2   0.097   0.283  RST_P[31]_AND_67_o1 (RST_P[31]_AND_67_o)
+     LDC:CLR                   0.349          s_1_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST_P[31]_AND_4_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.523ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       s_32_LDC (LATCH)
+  Destination Clock: RST_P[31]_AND_4_o falling
+
+  Data Path: RST to s_32_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.793  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.097   0.283  RST_P[31]_AND_5_o1 (RST_P[31]_AND_5_o)
+     LDC:CLR                   0.349          s_32_LDC
+    ----------------------------------------
+    Total                      1.523ns (0.447ns logic, 1.076ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_4_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.402ns (Levels of Logic = 2)
+  Source:            s_32_LDC (LATCH)
+  Destination:       P<31> (PAD)
+  Source Clock:      RST_P[31]_AND_4_o falling
+
+  Data Path: s_32_LDC to P<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_32_LDC (s_32_LDC)
+     LUT3:I0->O            6   0.097   0.302  s_321 (s_32)
+     OBUF:I->O                 0.000          P_31_OBUF (P<31>)
+    ----------------------------------------
+    Total                      1.402ns (0.569ns logic, 0.833ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 64 / 32
+-------------------------------------------------------------------------
+Offset:              1.247ns (Levels of Logic = 2)
+  Source:            s_1_P_1 (FF)
+  Destination:       P<0> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: s_1_P_1 to P<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              6   0.361   0.402  s_1_P_1 (s_1_P_1)
+     LUT3:I1->O           35   0.097   0.387  s_11 (s_1)
+     OBUF:I->O                 0.000          P_0_OBUF (P<0>)
+    ----------------------------------------
+    Total                      1.247ns (0.458ns logic, 0.789ns route)
+                                       (36.7% logic, 63.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_6_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.402ns (Levels of Logic = 2)
+  Source:            s_31_LDC (LATCH)
+  Destination:       P<30> (PAD)
+  Source Clock:      RST_P[31]_AND_6_o falling
+
+  Data Path: s_31_LDC to P<30>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_31_LDC (s_31_LDC)
+     LUT3:I0->O            6   0.097   0.302  s_311 (s_31)
+     OBUF:I->O                 0.000          P_30_OBUF (P<30>)
+    ----------------------------------------
+    Total                      1.402ns (0.569ns logic, 0.833ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_8_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_30_LDC (LATCH)
+  Destination:       P<29> (PAD)
+  Source Clock:      RST_P[31]_AND_8_o falling
+
+  Data Path: s_30_LDC to P<29>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_30_LDC (s_30_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_301 (s_30)
+     OBUF:I->O                 0.000          P_29_OBUF (P<29>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_10_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_29_LDC (LATCH)
+  Destination:       P<28> (PAD)
+  Source Clock:      RST_P[31]_AND_10_o falling
+
+  Data Path: s_29_LDC to P<28>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_29_LDC (s_29_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_291 (s_29)
+     OBUF:I->O                 0.000          P_28_OBUF (P<28>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_12_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_28_LDC (LATCH)
+  Destination:       P<27> (PAD)
+  Source Clock:      RST_P[31]_AND_12_o falling
+
+  Data Path: s_28_LDC to P<27>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_28_LDC (s_28_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_281 (s_28)
+     OBUF:I->O                 0.000          P_27_OBUF (P<27>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_14_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_27_LDC (LATCH)
+  Destination:       P<26> (PAD)
+  Source Clock:      RST_P[31]_AND_14_o falling
+
+  Data Path: s_27_LDC to P<26>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_27_LDC (s_27_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_271 (s_27)
+     OBUF:I->O                 0.000          P_26_OBUF (P<26>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_16_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_26_LDC (LATCH)
+  Destination:       P<25> (PAD)
+  Source Clock:      RST_P[31]_AND_16_o falling
+
+  Data Path: s_26_LDC to P<25>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_26_LDC (s_26_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_261 (s_26)
+     OBUF:I->O                 0.000          P_25_OBUF (P<25>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_18_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_25_LDC (LATCH)
+  Destination:       P<24> (PAD)
+  Source Clock:      RST_P[31]_AND_18_o falling
+
+  Data Path: s_25_LDC to P<24>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_25_LDC (s_25_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_251 (s_25)
+     OBUF:I->O                 0.000          P_24_OBUF (P<24>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_20_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_24_LDC (LATCH)
+  Destination:       P<23> (PAD)
+  Source Clock:      RST_P[31]_AND_20_o falling
+
+  Data Path: s_24_LDC to P<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_24_LDC (s_24_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_241 (s_24)
+     OBUF:I->O                 0.000          P_23_OBUF (P<23>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_22_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_23_LDC (LATCH)
+  Destination:       P<22> (PAD)
+  Source Clock:      RST_P[31]_AND_22_o falling
+
+  Data Path: s_23_LDC to P<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_23_LDC (s_23_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_231 (s_23)
+     OBUF:I->O                 0.000          P_22_OBUF (P<22>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_24_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_22_LDC (LATCH)
+  Destination:       P<21> (PAD)
+  Source Clock:      RST_P[31]_AND_24_o falling
+
+  Data Path: s_22_LDC to P<21>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_22_LDC (s_22_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_221 (s_22)
+     OBUF:I->O                 0.000          P_21_OBUF (P<21>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_26_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_21_LDC (LATCH)
+  Destination:       P<20> (PAD)
+  Source Clock:      RST_P[31]_AND_26_o falling
+
+  Data Path: s_21_LDC to P<20>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_21_LDC (s_21_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_211 (s_21)
+     OBUF:I->O                 0.000          P_20_OBUF (P<20>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_28_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_20_LDC (LATCH)
+  Destination:       P<19> (PAD)
+  Source Clock:      RST_P[31]_AND_28_o falling
+
+  Data Path: s_20_LDC to P<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_20_LDC (s_20_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_201 (s_20)
+     OBUF:I->O                 0.000          P_19_OBUF (P<19>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_30_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_19_LDC (LATCH)
+  Destination:       P<18> (PAD)
+  Source Clock:      RST_P[31]_AND_30_o falling
+
+  Data Path: s_19_LDC to P<18>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_19_LDC (s_19_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_191 (s_19)
+     OBUF:I->O                 0.000          P_18_OBUF (P<18>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_32_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_18_LDC (LATCH)
+  Destination:       P<17> (PAD)
+  Source Clock:      RST_P[31]_AND_32_o falling
+
+  Data Path: s_18_LDC to P<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_18_LDC (s_18_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_181 (s_18)
+     OBUF:I->O                 0.000          P_17_OBUF (P<17>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_34_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.388ns (Levels of Logic = 2)
+  Source:            s_17_LDC (LATCH)
+  Destination:       P<16> (PAD)
+  Source Clock:      RST_P[31]_AND_34_o falling
+
+  Data Path: s_17_LDC to P<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.530  s_17_LDC (s_17_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_171 (s_17)
+     OBUF:I->O                 0.000          P_16_OBUF (P<16>)
+    ----------------------------------------
+    Total                      1.388ns (0.569ns logic, 0.819ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_36_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.379ns (Levels of Logic = 2)
+  Source:            s_16_LDC (LATCH)
+  Destination:       P<15> (PAD)
+  Source Clock:      RST_P[31]_AND_36_o falling
+
+  Data Path: s_16_LDC to P<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.472   0.521  s_16_LDC (s_16_LDC)
+     LUT3:I0->O            3   0.097   0.289  s_161 (s_16)
+     OBUF:I->O                 0.000          P_15_OBUF (P<15>)
+    ----------------------------------------
+    Total                      1.379ns (0.569ns logic, 0.810ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_38_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_15_LDC (LATCH)
+  Destination:       P<14> (PAD)
+  Source Clock:      RST_P[31]_AND_38_o falling
+
+  Data Path: s_15_LDC to P<14>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_15_LDC (s_15_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_151 (s_15)
+     OBUF:I->O                 0.000          P_14_OBUF (P<14>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_40_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_14_LDC (LATCH)
+  Destination:       P<13> (PAD)
+  Source Clock:      RST_P[31]_AND_40_o falling
+
+  Data Path: s_14_LDC to P<13>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_14_LDC (s_14_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_141 (s_14)
+     OBUF:I->O                 0.000          P_13_OBUF (P<13>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_42_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_13_LDC (LATCH)
+  Destination:       P<12> (PAD)
+  Source Clock:      RST_P[31]_AND_42_o falling
+
+  Data Path: s_13_LDC to P<12>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_13_LDC (s_13_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_131 (s_13)
+     OBUF:I->O                 0.000          P_12_OBUF (P<12>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_44_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_12_LDC (LATCH)
+  Destination:       P<11> (PAD)
+  Source Clock:      RST_P[31]_AND_44_o falling
+
+  Data Path: s_12_LDC to P<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_12_LDC (s_12_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_121 (s_12)
+     OBUF:I->O                 0.000          P_11_OBUF (P<11>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_46_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_11_LDC (LATCH)
+  Destination:       P<10> (PAD)
+  Source Clock:      RST_P[31]_AND_46_o falling
+
+  Data Path: s_11_LDC to P<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_11_LDC (s_11_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_111 (s_11)
+     OBUF:I->O                 0.000          P_10_OBUF (P<10>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_48_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_10_LDC (LATCH)
+  Destination:       P<9> (PAD)
+  Source Clock:      RST_P[31]_AND_48_o falling
+
+  Data Path: s_10_LDC to P<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_10_LDC (s_10_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_101 (s_10)
+     OBUF:I->O                 0.000          P_9_OBUF (P<9>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_50_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_9_LDC (LATCH)
+  Destination:       P<8> (PAD)
+  Source Clock:      RST_P[31]_AND_50_o falling
+
+  Data Path: s_9_LDC to P<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_9_LDC (s_9_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_91 (s_9)
+     OBUF:I->O                 0.000          P_8_OBUF (P<8>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_52_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_8_LDC (LATCH)
+  Destination:       P<7> (PAD)
+  Source Clock:      RST_P[31]_AND_52_o falling
+
+  Data Path: s_8_LDC to P<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_8_LDC (s_8_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_81 (s_8)
+     OBUF:I->O                 0.000          P_7_OBUF (P<7>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_54_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_7_LDC (LATCH)
+  Destination:       P<6> (PAD)
+  Source Clock:      RST_P[31]_AND_54_o falling
+
+  Data Path: s_7_LDC to P<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_7_LDC (s_7_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_71 (s_7)
+     OBUF:I->O                 0.000          P_6_OBUF (P<6>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_56_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_6_LDC (LATCH)
+  Destination:       P<5> (PAD)
+  Source Clock:      RST_P[31]_AND_56_o falling
+
+  Data Path: s_6_LDC to P<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_6_LDC (s_6_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_61 (s_6)
+     OBUF:I->O                 0.000          P_5_OBUF (P<5>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_58_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_5_LDC (LATCH)
+  Destination:       P<4> (PAD)
+  Source Clock:      RST_P[31]_AND_58_o falling
+
+  Data Path: s_5_LDC to P<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_5_LDC (s_5_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_51 (s_5)
+     OBUF:I->O                 0.000          P_4_OBUF (P<4>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_60_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_4_LDC (LATCH)
+  Destination:       P<3> (PAD)
+  Source Clock:      RST_P[31]_AND_60_o falling
+
+  Data Path: s_4_LDC to P<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_4_LDC (s_4_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_41 (s_4)
+     OBUF:I->O                 0.000          P_3_OBUF (P<3>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_62_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_3_LDC (LATCH)
+  Destination:       P<2> (PAD)
+  Source Clock:      RST_P[31]_AND_62_o falling
+
+  Data Path: s_3_LDC to P<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_3_LDC (s_3_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_31 (s_3)
+     OBUF:I->O                 0.000          P_2_OBUF (P<2>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_64_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 2)
+  Source:            s_2_LDC (LATCH)
+  Destination:       P<1> (PAD)
+  Source Clock:      RST_P[31]_AND_64_o falling
+
+  Data Path: s_2_LDC to P<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.472   0.525  s_2_LDC (s_2_LDC)
+     LUT3:I0->O            2   0.097   0.283  s_21 (s_2)
+     OBUF:I->O                 0.000          P_1_OBUF (P<1>)
+    ----------------------------------------
+    Total                      1.378ns (0.569ns logic, 0.809ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST_P[31]_AND_66_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.490ns (Levels of Logic = 2)
+  Source:            s_1_LDC (LATCH)
+  Destination:       P<0> (PAD)
+  Source Clock:      RST_P[31]_AND_66_o falling
+
+  Data Path: s_1_LDC to P<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              6   0.472   0.534  s_1_LDC (s_1_LDC)
+     LUT3:I0->O           35   0.097   0.387  s_11 (s_1)
+     OBUF:I->O                 0.000          P_0_OBUF (P<0>)
+    ----------------------------------------
+    Total                      1.490ns (0.569ns logic, 0.921ns route)
+                                       (38.2% logic, 61.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'valid1_G'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.751ns (Levels of Logic = 1)
+  Source:            valid1_1 (LATCH)
+  Destination:       valid (PAD)
+  Source Clock:      valid1_G falling
+
+  Data Path: valid1_1 to valid
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.279  valid1_1 (valid1_1)
+     OBUF:I->O                 0.000          valid_OBUF (valid)
+    ----------------------------------------
+    Total                      0.751ns (0.472ns logic, 0.279ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |    3.088|         |         |         |
+RST               |         |    2.663|         |         |
+RST_P[31]_AND_10_o|         |    2.630|         |         |
+RST_P[31]_AND_12_o|         |    2.653|         |         |
+RST_P[31]_AND_14_o|         |    2.676|         |         |
+RST_P[31]_AND_16_o|         |    2.699|         |         |
+RST_P[31]_AND_18_o|         |    2.722|         |         |
+RST_P[31]_AND_20_o|         |    2.745|         |         |
+RST_P[31]_AND_22_o|         |    2.768|         |         |
+RST_P[31]_AND_24_o|         |    2.791|         |         |
+RST_P[31]_AND_26_o|         |    2.814|         |         |
+RST_P[31]_AND_28_o|         |    2.837|         |         |
+RST_P[31]_AND_30_o|         |    2.860|         |         |
+RST_P[31]_AND_32_o|         |    2.883|         |         |
+RST_P[31]_AND_34_o|         |    2.906|         |         |
+RST_P[31]_AND_36_o|         |    1.768|         |         |
+RST_P[31]_AND_38_o|         |    1.772|         |         |
+RST_P[31]_AND_40_o|         |    1.772|         |         |
+RST_P[31]_AND_42_o|         |    1.772|         |         |
+RST_P[31]_AND_44_o|         |    1.772|         |         |
+RST_P[31]_AND_46_o|         |    1.772|         |         |
+RST_P[31]_AND_48_o|         |    1.772|         |         |
+RST_P[31]_AND_4_o |         |    2.574|         |         |
+RST_P[31]_AND_50_o|         |    1.772|         |         |
+RST_P[31]_AND_52_o|         |    1.772|         |         |
+RST_P[31]_AND_54_o|         |    1.772|         |         |
+RST_P[31]_AND_56_o|         |    1.772|         |         |
+RST_P[31]_AND_58_o|         |    1.772|         |         |
+RST_P[31]_AND_60_o|         |    1.772|         |         |
+RST_P[31]_AND_62_o|         |    1.772|         |         |
+RST_P[31]_AND_64_o|         |    1.772|         |         |
+RST_P[31]_AND_66_o|         |    2.607|         |         |
+RST_P[31]_AND_6_o |         |    2.597|         |         |
+RST_P[31]_AND_8_o |         |    2.607|         |         |
+valid1_G          |         |    2.160|         |         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_10_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_10_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_12_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_12_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_14_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_14_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_16_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_16_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_18_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_18_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_20_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_20_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_22_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_22_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_24_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_24_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_26_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_26_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_28_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_28_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_30_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_30_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_32_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_32_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_34_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_34_o|         |         |    1.600|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_36_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_36_o|         |         |    1.591|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_38_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_38_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_40_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_40_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_42_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_42_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_44_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_44_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_46_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_46_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_48_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_48_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_4_o
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+CLK              |         |         |    3.088|         |
+RST_P[31]_AND_4_o|         |         |    1.600|         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_50_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_50_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_52_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_52_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_54_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_54_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_56_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_56_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_58_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_58_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_60_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_60_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_62_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_62_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_64_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_64_o|         |         |    1.595|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_66_o
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK               |         |         |    3.088|         |
+RST_P[31]_AND_66_o|         |         |    1.604|         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_6_o
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+CLK              |         |         |    3.088|         |
+RST_P[31]_AND_6_o|         |         |    1.600|         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST_P[31]_AND_8_o
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+CLK              |         |         |    3.088|         |
+RST_P[31]_AND_8_o|         |         |    1.600|         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock valid1_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    1.946|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.48 secs
+ 
+--> 
+
+Total memory usage is 4618100 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   21 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,5 @@
+vhdl isim_temp "../../../4x5 bit/code/half_adder.vhd"
+vhdl isim_temp "../../../4x5 bit/code/full_adder.vhd"
+vhdl isim_temp "../../../4x5 bit/code/add_sub_4_bit.vhd"
+vhdl isim_temp "../../../4x5 bit/code/array_multiplier.vhd"
+vhdl isim_temp "../../../4x5 bit/code/array_multiplier_tb.vhd"

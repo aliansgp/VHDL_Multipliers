@@ -1,0 +1,28 @@
+Command line:
+   common_multiplier4x5_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50659
+
+Wed Jan 11 14:36:18 2023
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 5154.95 Meg
+
+ Total Signals          : 153
+ Total Nets             : 77
+ Total Signal Drivers   : 68
+ Total Blocks           : 31
+ Total Primitive Blocks : 21
+ Total Processes        : 67
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 437
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 5154.95 Meg
+
+Wed Jan 11 14:36:43 2023
+

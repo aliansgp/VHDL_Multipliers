@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">full_adder_ins3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">add_sub_4_bit_ins0</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">full_adder_ins2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">add_sub_4_bit_ins1</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">full_adder_ins3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">add_sub_4_bit_ins1</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">full_adder_ins1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">add_sub_4_bit_ins2</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">full_adder_ins2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">add_sub_4_bit_ins2</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">full_adder_ins3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">add_sub_4_bit_ins2</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+</messages>
+
